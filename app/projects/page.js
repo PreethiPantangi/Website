@@ -3,6 +3,17 @@ import React from 'react'
 
 const projectDetails = [
   {
+    id: 'prj5',
+    name: 'React Utilityy Suite',
+    position: "",
+    type: 'Full Time',
+    startDate: 'July 2023',
+    endDate: 'Present',
+    logo: 'https://media.licdn.com/dms/image/C4E0BAQHKpwh4KyVNbw/company-logo_100_100/0/1630589932256/npm_inc__logo?e=1729728000&v=beta&t=nQl9WyEOKk12agMmeOwyiTVhIKpiOlATNLlQ6rElrXA',
+    projectLink: 'https://www.npmjs.com/package/react-ui-utility-suite',
+    githubLink: 'https://github.com/PreethiPantangi/react-ui-utility-suite'
+  },
+  {
     id: 'prj1',
     name: 'Swiggy Clone',
     position: "",
