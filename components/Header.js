@@ -5,40 +5,47 @@ const menuItems = [
     id: '1',
     name: 'About',
     link: '/about',
+    isSelected: true,
     pathD: 'M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.31 0-6 2.69-6 6v2h12v-2c0-3.31-2.69-6-6-6z'
   },
   {
     id: '2',
     name: 'Experience',
     link: '/experience',
+    isSelected: false,
     pathD: 'M12 2h4a2 2 0 012 2v2h3a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h3V4a2 2 0 012-2zm4 4V4h-4v2h4zM5 10v10h14V10H5zm2 3h2v5H7v-5zm6 0h2v5h-2v-5z'
   },
   {
     id: '3',
     name: 'Projects',
     link: '/projects',
+    isSelected: false,
     pathD: 'M12 4H2v16h20V6H12l-2-2zm10 2v2H4V6h6.28L12 7.72 13.72 6H20z'
   },
   {
     id: '4',
     name: 'Skills',
+    isSelected: false,
     link: '/skills',
   },
   {
     id: '5',
     name: 'Education',
     link: '/education',
+    isSelected: false,
     pathD: 'M12 2L2 7v11a2 2 0 002 2h16a2 2 0 002-2V7l-10-5zm5 16H7v-2h10v2zm0-4H7v-2h10v2zm0-4H7V8h10v2z'
   },
   {
     id: '6',
     name: 'Resume',
-    link: '/resume',
+    link: '/SaiPreethiPantangi.pdf',
+    isSelected: false,
     pathD: 'M 19.355 10.036 C 18.674 6.595 15.641 4 12 4 C 9.108 4 6.603 5.639 5.352 8.036 C 2.343 8.36 0 10.906 0 14 C 0 17.314 2.686 20 6 20 L 19 20 C 21.761 20 24 17.761 24 15 C 24 12.36 21.948 10.221 19.355 10.036 z M 12 18 L 7 13 L 10 13 L 10 9 L 14 9 L 14 13 L 17 13 L 12 18 z'
   }, {
     id: '7',
     name: 'Contact',
     link: '/contact',
+    isSelected: false,
     pathD: 'M12,2c-4.97,0-9,4.03-9,9c0,2.5,1.03,4.73,2.68,6.32L7.5,19.5c-0.75-0.75-1.14-1.75-1.14-2.81 c0-2.21,1.79-4,4-4s4,1.79,4,4c0,1.06-0.39,2.06-1.14,2.81l2.82,2.82C19.97,15.73,21,13.5,21,11C21,6.03,16.97,2,12,2z M12,16 c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2S13.1,16,12,16z'
   }
 ];
@@ -59,7 +66,7 @@ const Header = ({isMenuOpen, setIsMenuOpen}) => {
             </div>
         </div>
         {/* Small screen */}
-        <div className="sm:hidden md:hidden">
+        <div className="sm:hidden md:hidden bg-white shadow-xl">
             <div>
               <div className='flex justify-between p-2'>
                   <div className='cursor-pointer' onClick={setIsMenuOpen}>
@@ -102,12 +109,13 @@ const Header = ({isMenuOpen, setIsMenuOpen}) => {
 };
 
 const Menu = ({ isMenuOpen, setIsMenuOpen }) => {
+
   return (
     <ul className="p-4">
       {
         menuItems.map((menuItem) => (
-            <Link href={menuItem.link} key={menuItem.id} onClick={setIsMenuOpen}>
-              <li className="mb-2 p-4 hover:bg-[#ebebeb] cursor-pointer border-l-4 border-transparent">
+            <Link href={menuItem.link} target={`${menuItem.name === 'Resume' ? '_blank' : ''}`} key={menuItem.id} onClick={setIsMenuOpen}>
+              <li className={`mb-2 p-4 hover:bg-[#ebebeb] cursor-pointer border-l-4 border-transparent`}>
                 <div className='flex gap-3'>
                     <div>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">

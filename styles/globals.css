@@ -8,3 +8,7 @@
     border-image: linear-gradient(to right top, #774ba0, #685aad, #5767b6, #4572bc, #347dbf);
     border-image-slice: 1;
 }  
+
+.gradient-background {
+    background-image: (to bottom right,  #774ba0, #347dbf);
+}
