@@ -4,7 +4,7 @@ import React from 'react'
 const projectDetails = [
   {
     id: 'prj5',
-    name: 'React Utilityy Suite',
+    name: 'React Utility Suite',
     position: "",
     type: 'Full Time',
     startDate: 'July 2023',
