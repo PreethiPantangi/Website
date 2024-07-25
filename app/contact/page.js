@@ -20,10 +20,10 @@ const socialMediaLinks = [
 const page = () => {
 
   const [formDetails, setFormDetails] = useState({
-    fullName: '',
-    email: '',
-    subject: '',
-    message: ''
+    fullName: 'Jane Smith',
+    email: 'jane.smith@gmail.com',
+    subject: 'Test Subject',
+    message: 'Test message'
   });
 
   const updateFormValue = (e) => {
@@ -62,7 +62,7 @@ const page = () => {
             ))
           }
         </div>
-        <div className='mt-3'>Or shoot me an email</div>
+        {/* <div className='mt-3'>Or shoot me an email</div>
         <form className="">
           <div className="gap-4">
             <div className="mt-2">
@@ -93,7 +93,7 @@ const page = () => {
               <button className=" p-3 w-full bg-gradient-to-br text-white font-semibold" onClick={sendEmail}>Connect</button>
             </div>
           </div>
-        </form>
+        </form> */}
         </div>
       </div>
     </div>
