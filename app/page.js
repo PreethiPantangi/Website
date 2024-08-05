@@ -3,6 +3,7 @@
 import Header from '@components/Header';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 const Home = ({children}) => {
 
@@ -27,12 +28,14 @@ const Home = ({children}) => {
         <div className="hidden sm:block md:block">
           <div>
             {children}
+            <Analytics/>
           </div>
         </div>
         {/* Small screen content */}
         <div className="sm:hidden md:hidden flex">
           <div className={style}>
             {children}
+            <Analytics/>
           </div>
         </div>
       </div>
